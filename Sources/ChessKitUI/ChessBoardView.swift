@@ -99,25 +99,25 @@ public struct ChessBoardView: View {
     }
     
     private func pieceView(for piece: Piece) -> some View {
-        Text(self.symbol(for: piece))
-            .font(.system(size: 30))
+        let imageName = self.imageName(for: piece)
+        // By default this looks in the consuming app's asset catalog so users can provide their own SVGs.
+        return Image(imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
     
-    private func symbol(for piece: Piece) -> String {
-        switch (piece.kind, piece.color) {
-        case (.king, .white): return "♔"
-        case (.queen, .white): return "♕"
-        case (.rook, .white): return "♖"
-        case (.bishop, .white): return "♗"
-        case (.knight, .white): return "♘"
-        case (.pawn, .white): return "♙"
-        case (.king, .black): return "♚"
-        case (.queen, .black): return "♛"
-        case (.rook, .black): return "♜"
-        case (.bishop, .black): return "♝"
-        case (.knight, .black): return "♞"
-        case (.pawn, .black): return "♟︎"
+    private func imageName(for piece: Piece) -> String {
+        let prefix = piece.color == .white ? "w" : "b"
+        let suffix: String
+        switch piece.kind {
+        case .pawn: suffix = "p"
+        case .knight: suffix = "n"
+        case .bishop: suffix = "b"
+        case .rook: suffix = "r"
+        case .queen: suffix = "q"
+        case .king: suffix = "k"
         }
+        return "\(prefix)\(suffix)"
     }
     
     private func dragGesture(squareSize: CGFloat) -> some Gesture {

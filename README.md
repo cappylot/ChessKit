@@ -96,6 +96,10 @@ struct ContentView: View {
 }
 ```
 
+#### Custom piece images
+
+`ChessBoardView` loads piece assets by name from your app target. Add SVG (or PDF/PNG) assets titled `wp`, `wn`, `wb`, `wr`, `wq`, `wk` and their black counterparts `bp`, `bn`, `bb`, `br`, `bq`, `bk` to your asset catalog; the board will render those images automatically.
+
 ## How To Contribute
 
 Please follow the [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/index.html) notation and make sure that all tests are passing before contributing. Your questions and pull requests are welcome.
