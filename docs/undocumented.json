@@ -1,13 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/home/runner/work/ChessKit/ChessKit/Sources/ChessKit/FenSerialization.swift",
-      "line": 12,
-      "symbol": "FenSerialization.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/home/runner/work/ChessKit/ChessKit/Sources/ChessKit/Rules/StandardRules.swift",
       "line": 143,
       "symbol": "StandardRules.coveredSquares(in:)",

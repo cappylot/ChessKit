@@ -9,6 +9,7 @@
 /// FEN positions serialization and deserialization.
 public class FenSerialization {
     
+    /// Initializes a new instance of `FenSerialization`.
     public init () {}
     
     /// `FenSerialization` object with default settings.
