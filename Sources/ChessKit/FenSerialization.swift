@@ -9,6 +9,8 @@
 /// FEN positions serialization and deserialization.
 public class FenSerialization {
     
+    public init () {}
+    
     /// `FenSerialization` object with default settings.
     public static let `default` = FenSerialization()
     
