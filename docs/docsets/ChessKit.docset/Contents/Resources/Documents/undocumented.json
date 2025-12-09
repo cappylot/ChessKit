@@ -1,26 +1,19 @@
 {
   "warnings": [
     {
-      "file": "/Users/aperechnev/Projects/ChessKit/Sources/ChessKit/FenSerialization.swift",
-      "line": 9,
-      "symbol": "FenSerialization",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aperechnev/Projects/ChessKit/Sources/ChessKit/Rules/StandardRules.swift",
-      "line": 137,
-      "symbol": "StandardRules.coveredSquares(in:)",
+      "file": "/home/runner/work/ChessKit/ChessKit/Sources/ChessKit/FenSerialization.swift",
+      "line": 12,
+      "symbol": "FenSerialization.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/aperechnev/Projects/ChessKit/Sources/ChessKit/SanSerialization.swift",
-      "line": 10,
-      "symbol": "SanSerialization",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "file": "/home/runner/work/ChessKit/ChessKit/Sources/ChessKit/Rules/StandardRules.swift",
+      "line": 143,
+      "symbol": "StandardRules.coveredSquares(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/aperechnev/Projects/ChessKit"
+  "source_directory": "/home/runner/work/ChessKit/ChessKit"
 }
