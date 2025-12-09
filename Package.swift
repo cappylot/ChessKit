@@ -10,12 +10,20 @@ let package = Package(
             name: "ChessKit",
             targets: ["ChessKit"]
         ),
+        .library(
+            name: "ChessKitUI",
+            targets: ["ChessKitUI"]
+        ),
     ],
     dependencies: [],
     targets: [
         .target(
             name: "ChessKit",
             dependencies: []
+        ),
+        .target(
+            name: "ChessKitUI",
+            dependencies: ["ChessKit"]
         ),
         .testTarget(
             name: "ChessKitTests",

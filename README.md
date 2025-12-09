@@ -32,6 +32,12 @@ let package = Package(
 )
 ```
 
+To render a ready-to-use SwiftUI board with drag-and-drop support, depend on the `ChessKitUI` product:
+
+```swift
+.target(name: "MyPackage", dependencies: ["ChessKitUI"])
+```
+
 ### CocoaPods
 
 To install ChessKit via CocoaPods, just add a dependencie to your `Podfile`:
@@ -65,6 +71,29 @@ print("Evans gambit accepted fen: \(evansGambitAcceptedFen)")
 
 print("List of moves in game: \(game.movesHistory)")
 print("List of pieces on board: \(game.position.board.enumeratedPieces())")
+```
+
+### SwiftUI board with legal move highlights
+
+`ChessKitUI` ships a drop-in `ChessBoardView` that uses the same move generator under the hood. Highlights appear when selecting a piece; moves can be made by tapping or dragging a piece to its destination.
+
+```swift
+import SwiftUI
+import ChessKitUI
+
+struct ContentView: View {
+    @StateObject private var board = ChessBoardViewModel()
+
+    var body: some View {
+        VStack(spacing: 12) {
+            ChessBoardView(viewModel: board)
+                .frame(width: 360, height: 360)
+            Text(board.turn == .white ? "White to move" : "Black to move")
+                .font(.headline)
+        }
+        .padding()
+    }
+}
 ```
 
 ## How To Contribute
