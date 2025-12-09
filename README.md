@@ -24,7 +24,7 @@ let package = Package(
         .macOS(.v10_12),
     ],
     dependencies: [
-        .package(url: "https://github.com/aperechnev/ChessKit.git", from: "1.2.10"),
+        .package(url: "https://github.com/aperechnev/ChessKit.git", from: "1.3.7"),
     ],
     targets: [
         .target(name: "MyPackage", dependencies: ["ChessKit"]),
